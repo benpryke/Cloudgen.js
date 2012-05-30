@@ -19,56 +19,6 @@
     };
     
     
-    // context, x, y, radius, colour, alpha, density
-    // Does not reset global params.
-    /*cloudgen.drawCloud = function(context, centreX, centreY, radius, colour, alpha, density) {
-        // Set default parameters.
-        switch (arguments.length) {
-            case 0: return;
-            case 1: centreX = 0;
-            case 2: centreY = 0;
-            case 3: radius = 100;
-            case 4: colour = {r:255, g:255, b:255};
-            case 5: alpha = 1.0;
-            case 6: density = 30;
-        }
-        
-        // Set some values we need.
-        var circleRadius = radius * CIRCLE_RADIUS_RATIO;
-        var innerGradientRadius = circleRadius * INNER_GRADIENT_RATIO;
-        var colourString = "rgba(" + colour.r + ", " + colour.g + ", " + colour.b + ", ";
-        var colourStop1 = colourString + "0.1)";
-        var colourStop2 = colourString + "0.0)";
-        
-        // Set up context.
-        context.save();
-        context.globalAlpha = alpha;
-        
-        // Create as many circles as indicated by "density".
-        for (var i = 0; i < density; i++) {
-            // Calculate the circle position within the cloud.
-            var angle = Math.random() * TWO_PI;
-            var x = centreX + Math.random() * radius * Math.cos(angle);
-            var y = centreY + Math.random() * radius * Math.sin(angle);
-            
-            // Create the circle gradient.
-            // TODO: should we be drawing a circle to a canvas and drawing that multiple times?
-            var gradient = context.createRadialGradient(x, y, innerGradientRadius, x, y, circleRadius);
-            gradient.addColorStop(0, colourStop1);
-            gradient.addColorStop(1, colourStop2);
-            context.fillStyle = gradient;
-            
-            // Draw the circle.
-            context.beginPath();
-            context.arc(x, y, circleRadius, 0, TWO_PI, true);
-            context.fill();
-        }
-        
-        // Restore our changes to the context.
-        context.restore();
-    };*/
-    
-    
     /*  Draws a single cloud to the given canvas context.
         
         context: (Required)
