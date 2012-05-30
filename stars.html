@@ -57,33 +57,26 @@ for (var i = 0; i < starCount; i++) {
 
 var start = new Date().getTime();
 
-// for (var j = 0; j < 5; j++) {
-//     var centreX = 100 * j;
-//     var centreY = 100 * j;
-    
-//     cloudgen.drawCloud(context, centreX, centreY, 150, {r:255, g:255 - 25 * j, b:255}, 0.3, 30);
-// }
-
 var cloudGrid = [[1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0],
                  [1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
                  [1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
                  [1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0]];
 var radius = 39;
 
-cloudgen.drawCloudGroup(context, 50, 80, cloudGrid, radius, {r:255, g:255, b:255}, 0.13, 30);
+cloudgen.drawCloudGroup(context, cloudGrid, 50, 80, radius, {r:255, g:255, b:255}, 0.13, 30);
 
 var cloudGrid = [[0, 0, 1, 0, 0],
                  [1, 1, 1, 1, 0],
                  [0, 1, 1, 0, 1],
                  [0, 0, 0, 0, 1]];
 
-cloudgen.drawCloudGroup(context, 50, 380, cloudGrid, radius, {r:255, g:255, b:255}, 0.15, 30);
+cloudgen.drawCloudGroup(context, cloudGrid, 50, 380, radius, {r:255, g:255, b:255}, 0.15, 30);
 
 var cloudGrid = [[1, 0, 0],
                  [0, 1, 0],
                  [0, 0, 1]];
 
-cloudgen.drawCloudGroup(context, 400, 300, cloudGrid, 150, {r:255, g:0, b:255}, 0.13, 30);
+cloudgen.drawCloudGroup(context, cloudGrid, 400, 300, 150, {r:255, g:0, b:255}, 0.13, 30);
 
 
 
