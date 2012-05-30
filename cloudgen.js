@@ -133,7 +133,7 @@
             case 4: radius = 100;
         }
         
-        // Get the parameters that we need to sent to "drawCloud".
+        // Get an array of the parameters we need to send on to "drawCloud".
         var parameters = Array.prototype.splice.call(arguments, 4);
         
         // Loop through the cloud grid, row by row.
@@ -148,7 +148,9 @@
                     // Call "drawCloud" with the correct parameters as passed
                     // to this method. Parameters that were not passed will
                     // not be sent.
-                    this.drawCloud.apply(this, [context, centreX, centreY].concat(parameters));
+                    var args = [context, centreX, centreY].concat(parameters);
+                    
+                    this.drawCloud.apply(this, args);
                 }
             }
         }
