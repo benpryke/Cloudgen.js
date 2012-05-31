@@ -1,7 +1,7 @@
 # Cloudgen.js
 A fluffy cloud generator for the HTML5 Canvas.
 
-![Screenshot](http://raw.github.com/wiki/Ninjakannon/Cloudgen.js/cloudgen-stars-demo.png)
+![Screenshot](https://github.com/Ninjakannon/Cloudgen.js/wiki/cloudgen-stars-demo.png)
 
 This screenshot is taken from the provided stars demo.
 
