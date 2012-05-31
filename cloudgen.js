@@ -14,6 +14,12 @@
     // of "drawCloudGroup".
     var CLOUD_GROUP_SPACING = 0.75;
     
+    // Our default values.
+    var DEFAULT_RADIUS = 100;
+    var DEFAULT_COLOUR = {r:255, g:255, b:255};
+    var DEFAULT_ALPHA = 0.15;
+    var DEFAULT_CIRCLES = 25;
+    
     
     
     // Setup cloudgen ========================================================
@@ -35,18 +41,18 @@
         centreY (optional) Default 0.
             The approximate centre of the cloud in the y-dimension.
             
-        radius (optional) Default 100.
+        radius (optional) Default "DEFAULT_RADIUS".
             The radius of the circular area inside which the cloud will be
             generated.
             
-        colour (optional) Default {r:255, g:255, b:255}.
+        colour (optional) Default "DEFAULT_COLOUR".
             An object of the form {r:0, g:0, b:0} representing the RGB values
             of the cloud colour.
             
-        alpha (optional) Default 0.3.
+        alpha (optional) Default "DEFAULT_ALPHA".
             The transparency of the cloud. Range 0.0 to 1.0.
             
-        circles (optional) Default 30.
+        circles (optional) Default "DEFAULT_CIRCLES".
             Clouds are created by drawing numerous gradient-filled circles;
             the more there are, the thicker the cloud. This is the number to
             draw. */
@@ -56,10 +62,10 @@
             case 0: return;
             case 1: centreX = 0;
             case 2: centreY = 0;
-            case 3: radius = 100;
-            case 4: colour = {r:255, g:255, b:255};
-            case 5: alpha = 0.3;
-            case 6: circles = 30;
+            case 3: radius = DEFAULT_RADIUS;
+            case 4: colour = DEFAULT_COLOUR;
+            case 5: alpha = DEFAULT_ALPHA;
+            case 6: circles = DEFAULT_CIRCLES;
         }
         
         // Calcualte the radius of the circles used to draw the cloud.
@@ -130,7 +136,7 @@
             case 1: return;
             case 2: topLeftX = 0;
             case 3: topLeftY = 0;
-            case 4: radius = 100;
+            case 4: radius = DEFAULT_RADIUS;
         }
         
         // Get an array of the parameters we need to send on to "drawCloud".

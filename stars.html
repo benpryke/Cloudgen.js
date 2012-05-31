@@ -1,91 +1,15 @@
-<html>
+<!DOCTYPE html>
+
+<!-- TODO: License -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Cloudgen.js Demo: Stars</title>
     <script type="text/javascript" src="cloudgen.js"></script>
 </head>
 
 <body>
-<canvas id="sky"></canvas>
-<script type="text/javascript">
-// TODO: Remove magic numbers.
-
-// Answer this question: http://stackoverflow.com/questions/4927909/is-there-a-good-method-for-dynamically-drawing-clouds-with-html5-canvas-and-java
-
-var canvas = document.getElementById("sky");
-var context = canvas.getContext("2d");
-var starCount = 100;
-var maxX = 800;
-var maxY = 600;
-
-canvas.width = maxX;
-canvas.height = maxY;
-
-// Background.
-// We create a radial gradient from the bottom-left.
-var gradient = context.createRadialGradient(0, maxY, 0, 0, maxY, 1000);
-gradient.addColorStop(0, "#191C2B");
-gradient.addColorStop(0.5, "#2f3242");
-gradient.addColorStop(1, "#545973");
-
-context.fillStyle = gradient;
-context.beginPath();
-context.arc(0, maxY, 1000, 0, Math.PI * 2, true);
-context.fill();
-
-
-// Stars.
-// We randomly place a number of stars using shadows as a highlight.
-context.fillStyle = "#dadffa";
-context.shadowOffsetX = 0;
-context.shadowOffsetY = 0;
-context.shadowColor = "#a3ade6";
-
-for (var i = 0; i < starCount; i++) {
-    var radius = 1 + Math.random() * 2;
-    
-    context.beginPath();
-    context.arc(maxX * Math.random(), maxY * Math.random(), radius, 0, Math.PI * 2, true);
-    context.shadowBlur = 1 + Math.random() * 4 * radius;
-    context.fill();
-}
-
-
-// Clouds.
-// We create clouds using lots of circles filled with gradients. No shadows
-// are used, these were slower and harder to use. The context "globalAlpha"
-// property is useful for changing the transparency of the clouds.
-
-var start = new Date().getTime();
-
-var cloudGrid = [[1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0],
-                 [1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
-                 [1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1],
-                 [1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0]];
-var radius = 39;
-
-cloudgen.drawCloudGroup(context, cloudGrid, 50, 80, radius, {r:255, g:255, b:255}, 0.13, 30);
-
-var cloudGrid = [[0, 0, 1, 0, 0],
-                 [1, 1, 1, 1, 0],
-                 [0, 1, 1, 0, 1],
-                 [0, 0, 0, 0, 1]];
-
-cloudgen.drawCloudGroup(context, cloudGrid, 50, 380, radius, {r:255, g:255, b:255}, 0.15, 30);
-
-var cloudGrid = [[1, 0, 0],
-                 [0, 1, 0],
-                 [0, 0, 1]];
-
-cloudgen.drawCloudGroup(context, cloudGrid, 400, 300, 150, {r:255, g:0, b:255}, 0.13, 30);
-
-
-
-// Test.
-// var start = new Date().getTime();
-// cloudgen.drawCloud(context, 700, 100, 150);//, {r:255, g:255, b:255}, 0.3, 30);
-var end = new Date().getTime();
-console.log("Cloud time: " + (end - start).toString() + "ms");
-
-</script>
+    <canvas id="sky"></canvas>
+    <script type="text/javascript" src="stars.js"></script>
 </body>
 </html>
