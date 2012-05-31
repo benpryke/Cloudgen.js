@@ -1,3 +1,3 @@
 # Cloudgen.js
 
-![Screenshot](http://gems.github.com/octocat.png "Screenshot")
+![Screenshot](http://dl.dropbox.com/u/13193692/cloudgen-stars-demo.png "Screenshot")
