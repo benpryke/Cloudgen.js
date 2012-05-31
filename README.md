@@ -16,7 +16,7 @@ Note that some parameters are optional. Excluding these will use the default val
     Draws a single cloud to the given canvas context.
     
     context (required)
-        The 2D "CanvasRenderingContext2D" instance to draw to.
+        The "CanvasRenderingContext2D" instance to draw to.
         
     centreX (optional) Default 0.
         The approximate centre of the cloud in the x-dimension.
@@ -46,7 +46,7 @@ Note that some parameters are optional. Excluding these will use the default val
     Draws a grid of clouds to the given canvas context.
     
     context (required)
-        The 2D "CanvasRenderingContext2D" instance to draw to.
+        The "CanvasRenderingContext2D" instance to draw to.
     
     grid (required)
         A two-dimensional binary array specifying the location of clouds
