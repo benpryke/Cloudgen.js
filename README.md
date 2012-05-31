@@ -1,12 +1,12 @@
 # Cloudgen.js
 A fluffy cloud generator for the HTML5 Canvas.
 
-![Screenshot](http://dl.dropbox.com/u/13193692/cloudgen-stars-demo.png)
+![Screenshot](http://raw.github.com/wiki/Ninjakannon/Cloudgen.js/cloudgen-stars-demo.png)
 
 This screenshot is taken from the provided stars demo.
 
 ## Usage
-Include *cloudgen-min.js* on your webpage and you can access it via the global *$cloudgen* variable. There are 2 functions you can use to draw clouds. These are *$cloudgen.drawCloud* and *$cloudgen.drawCloudGroup*. Individual clouds drawn with the "drawCloud" method are generated within a circular area defined by their parameters. Thus, "drawCloudGroup" enables the creation of individual clouds with interesting or predefined shapes (see the screenshot above) as well as letting you draw many clouds at once. Because clouds are generated using random values you you must draw them to a new canvas to animate them.
+Include *cloudgen-min.js* on your webpage and Cloudgen.js will be accessable via the global *$cloudgen* variable. There are 2 functions you can use to draw clouds. These are *$cloudgen.drawCloud* and *$cloudgen.drawCloudGroup*. Individual clouds drawn with the "drawCloud" method are generated within a circular area defined by their parameters. Thus, "drawCloudGroup" enables the creation of individual clouds with interesting or predefined shapes (see the screenshot above) as well as letting you draw many clouds at once. Because clouds are generated using random values you you must draw them to a new canvas to animate them.
 
 Note that some parameters are optional. Excluding these will use the default value instead. Play around with the parameters, not all results will give you your desired look and you can get some interesting results (for example, try alpha = 1).
 
