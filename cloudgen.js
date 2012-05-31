@@ -8,7 +8,7 @@
     https://github.com/Ninjakannon/Cloudgen.js/blob/master/LICENSE.txt
 */
 
-// Hide the cloudgen scope from the global scope in an anonymous function.
+// Hide Cloudgen.js internals from the global scope in an anonymous function.
 (function() {
     // Constants =============================================================
     // We require this later, so precompute it here.
@@ -30,14 +30,14 @@
     
     
     
-    // Setup cloudgen ========================================================
-    // Create our cloudgen object.
-    var cloudgen = function() {
+    // Setup =================================================================
+    // Create our local Cloudgen.js object.
+    var Cloudgen = function() {
     };
     
     
     
-    // Public cloudgen Methods ===============================================
+    // Public Methods ========================================================
     /*  Draws a single cloud to the given canvas context.
         
         context (required)
@@ -64,7 +64,7 @@
             Clouds are created by drawing numerous gradient-filled circles;
             the more there are, the thicker the cloud. This is the number to
             draw. */
-    cloudgen.drawCloud = function(context, centreX, centreY, radius, colour, alpha, circles) {
+    Cloudgen.drawCloud = function(context, centreX, centreY, radius, colour, alpha, circles) {
         // Set default arguments.
         switch (arguments.length) {
             case 0: return;
@@ -137,7 +137,7 @@
         colour: see "drawCloud".
         alpha: see "drawCloud".
         circles: see "drawCloud". */
-    cloudgen.drawCloudGroup = function(context, grid, topLeftX, topLeftY, radius, colour, alpha, circles) {
+    Cloudgen.drawCloudGroup = function(context, grid, topLeftX, topLeftY, radius, colour, alpha, circles) {
         // Set default arguments.
         switch (arguments.length) {
             case 0: return;
@@ -173,6 +173,6 @@
     
     
     // Finalisation ==========================================================
-    // Expose cloudgen to the global scope.
-    window.cloudgen = cloudgen;
+    // Expose Cloudgen.js to the global scope.
+    window.$cloudgen = Cloudgen;
 })();

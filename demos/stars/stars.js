@@ -65,7 +65,7 @@ var cloudGrid = [[0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
                  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0]];
 
-cloudgen.drawCloudGroup(context, cloudGrid, 50, 60, 19, {r:255, g:255, b:255}, 0.2, 30);
+$cloudgen.drawCloudGroup(context, cloudGrid, 50, 60, 19, {r:255, g:255, b:255}, 0.2, 30);
 
 // Left-hand green cloud.
 cloudGrid = [[0, 1, 0, 0],
@@ -73,16 +73,16 @@ cloudGrid = [[0, 1, 0, 0],
              [1, 1, 0, 1],
              [0, 0, 0, 1]];
 
-cloudgen.drawCloudGroup(context, cloudGrid, 50, 300, 100, {r:100, g:255, b:0});
+$cloudgen.drawCloudGroup(context, cloudGrid, 50, 300, 100, {r:100, g:255, b:0});
 
 // Middle red cloud.
 cloudGrid = [[1, 0, 1, 1],
              [0, 1, 1, 0]];
 
-cloudgen.drawCloudGroup(context, cloudGrid, 300, 350, 100, {r:255, g:0, b:0});
+$cloudgen.drawCloudGroup(context, cloudGrid, 300, 350, 100, {r:255, g:0, b:0});
 
 // Right-hand light blue cloud.
 cloudGrid = [[0, 0, 1, 1],
              [1, 1, 1, 1]];
 
-cloudgen.drawCloudGroup(context, cloudGrid, 600, 350, 100, {r:180, g:200, b:255});
+$cloudgen.drawCloudGroup(context, cloudGrid, 600, 350, 100, {r:180, g:200, b:255});
