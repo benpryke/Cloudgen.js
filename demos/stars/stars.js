@@ -1,4 +1,12 @@
-// TODO: Add license.
+/*
+    This file is part of a demo for the Cloudgen.js JavaScript library.
+    
+    https://github.com/Ninjakannon/Cloudgen.js
+    
+    Copyright 2012 Benjamin Pryke
+    Released under the MIT license
+    https://github.com/Ninjakannon/Cloudgen.js/blob/master/LICENSE.txt
+*/
 
 // Get the canvas and set up some parameters.
 var canvas = document.getElementById("sky");

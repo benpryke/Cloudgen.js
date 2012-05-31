@@ -1,4 +1,12 @@
-// TODO: Add license.
+/*
+    Cloudgen.js JavaScript library version 1.0.
+    
+    https://github.com/Ninjakannon/Cloudgen.js
+    
+    Copyright 2012 Benjamin Pryke
+    Released under the MIT license
+    https://github.com/Ninjakannon/Cloudgen.js/blob/master/LICENSE.txt
+*/
 
 // Hide the cloudgen scope from the global scope in an anonymous function.
 (function() {
