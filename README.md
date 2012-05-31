@@ -1,8 +1,13 @@
 # Cloudgen.js
 A fluffy cloud generator for the HTML5 Canvas.
 
+![Screenshot](http://dl.dropbox.com/u/13193692/cloudgen-stars-demo.png)
+
+This screenshot is taken from the provided stars demo.
+
+
 ## Usage
-Include *cloudgen-min.js* on your webpage and you can access it via the global *$cloudgen* variable. There are 2 functions you can use to draw clouds. These are *$cloudgen.drawCloud* and *$cloudgen.drawCloudGroup*. Individual clouds drawn with the "drawCloud" method are generated within a circular area defined by their parameters. Thus, "drawCloudGroup" enables the creation of individual clouds with interesting or predefined shapes (see the screenshot below) as well as letting you draw many clouds at once. Because clouds are generated using random values you you must draw them to a new canvas to animate them.
+Include *cloudgen-min.js* on your webpage and you can access it via the global *$cloudgen* variable. There are 2 functions you can use to draw clouds. These are *$cloudgen.drawCloud* and *$cloudgen.drawCloudGroup*. Individual clouds drawn with the "drawCloud" method are generated within a circular area defined by their parameters. Thus, "drawCloudGroup" enables the creation of individual clouds with interesting or predefined shapes (see the screenshot above) as well as letting you draw many clouds at once. Because clouds are generated using random values you you must draw them to a new canvas to animate them.
 
 Note that some parameters are optional. Excluding these will use the default value instead. Play around with the parameters, not all results will give you your desired look and you can get some interesting results (for example, try alpha = 1).
 
@@ -73,9 +78,6 @@ The following code is used to draw the red cloud in the example below. Observe t
     
     $cloudgen.drawCloudGroup(context, cloudGrid, 300, 350, 100, {r:255, g:0, b:0});
 
-## Screenshot
-This screenshot is taken from the provided stars demo.
-![Screenshot](http://dl.dropbox.com/u/13193692/cloudgen-stars-demo.png)
 
 ## Contributing
 You may wish to contribute to the library or understand it further. The file *cloudgen.js* contains the entire library and is well commented. Observe that the code is wrapped in an anonymous function to hide variables from the global scope. The anonymous function body is split into the sections *Constants*, *Setup*, *Public Methods*, and *Finalisation*, each denoted with a comment ending in equals characters up to column 79. No comments extend further than column 79, and where possible lines do not either as this is more readable and generally looks prettier. As JavaScript does not support constants, the constants are merely variables named in the form CONSTANT_VARIABLE. Internally, the function *Cloudgen* represents the Cloudgen.js object, which is exposed to the global scope as *$cloudgen* in the *Finalisation* section. Comments above methods detail what they do, any return values (if applicable), and each parameter. The format should be clear and very readable.
