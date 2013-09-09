@@ -1,4 +1,4 @@
-/*
+/** @license
     Cloudgen.js JavaScript library version 1.0.
     
     https://github.com/Ninjakannon/Cloudgen.js
