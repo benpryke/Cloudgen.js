@@ -3,7 +3,7 @@
     
     https://github.com/Ninjakannon/Cloudgen.js
     
-    Copyright 2012 Benjamin Pryke
+    Copyright 2013 Benjamin Pryke
     Released under the MIT license
     https://github.com/Ninjakannon/Cloudgen.js/blob/master/LICENSE.txt
 */
